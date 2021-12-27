@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import logo from "../assets/cablecar.png";
+import NavOptions from "../components/NavOptions";
 
 const HomeScreen = () => {
   return (
@@ -11,6 +12,7 @@ const HomeScreen = () => {
           source={logo}
           style={{ width: 150, height: 150, resizeMode: "contain" }}
         />
+        <NavOptions />
       </View>
     </SafeAreaView>
   );
