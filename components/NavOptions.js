@@ -2,8 +2,10 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
-import { FlatList, TouchableOpacity } from "react-native-web";
+import { FlatList, TouchableOpacity } from "react-native";
 import tw from "tailwind-react-native-classnames";
+import { useSelector } from "react-redux";
+import { selectOrigin } from "../slices/navSlice";
 
 const data = [
   {
@@ -22,6 +24,7 @@ const data = [
 
 const NavOptions = () => {
   const navigation = useNavigation();
+  const origin = useSelector(selectOrigin);
 
   return (
     <FlatList
