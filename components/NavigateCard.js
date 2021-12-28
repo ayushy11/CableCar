@@ -4,6 +4,7 @@ import { StyleSheet, Text, SafeAreaView, View } from "react-native";
 import { useDispatch } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import { setDestination } from "../slices/navSlice";
+import NavFavourites from "./NavFavourites";
 
 const NavigateCard = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,8 @@ const NavigateCard = () => {
             Places Autocomplete
           </Text>
         </View>
+
+        <NavFavourites />
       </View>
     </SafeAreaView>
   );

@@ -3,6 +3,7 @@ import { StyleSheet, Text, SafeAreaView, View, Image } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import logo from "../assets/cablecar.png";
 import NavOptions from "../components/NavOptions";
+import NavFavourites from "../components/NavFavourites";
 // import MapboxAutocomplete from "react-mapbox-autocomplete";
 
 import { useDispatch } from "react-redux";
@@ -37,6 +38,7 @@ const HomeScreen = () => {
           resetSearch={false}
         /> */}
         <NavOptions />
+        <NavFavourites />
       </View>
     </SafeAreaView>
   );
