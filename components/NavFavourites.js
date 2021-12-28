@@ -20,12 +20,12 @@ const data = [
     location: "Work",
     destination: "London Eye, London, UK",
   },
-  {
-    id: "3",
-    icon: "briefcase",
-    location: "Work",
-    destination: "London Eye, London, UK",
-  },
+  //   {
+  //     id: "3",
+  //     icon: "briefcase",
+  //     location: "Work",
+  //     destination: "London Eye, London, UK",
+  //   },
 ];
 
 const NavFavourites = () => {
