@@ -56,7 +56,7 @@ const RideOptionsCard = () => {
           />
         </TouchableOpacity>
         <Text style={tw`text-center py-5 text-xl`}>
-          Select a Ride - {travelTimeInformation?.distance.text}
+          Select a Ride - {travelTimeInformation?.distance?.text}
         </Text>
       </View>
 
@@ -82,7 +82,7 @@ const RideOptionsCard = () => {
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
               <Text>
                 Travel time...
-                {travelTimeInformation?.duration.text}
+                {travelTimeInformation?.duration?.text}
               </Text>
             </View>
             <Text style={tw`text-xl`}>
@@ -91,7 +91,7 @@ const RideOptionsCard = () => {
                 style: "currency",
                 currency: "USD",
               }).format(
-                (travelTimeInformation?.duration.value *
+                (travelTimeInformation?.duration?.value *
                   SURGE_CHARGE_RATE *
                   multiplier) /
                   100
