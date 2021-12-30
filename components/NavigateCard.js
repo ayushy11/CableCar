@@ -1,8 +1,13 @@
-import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, View } from "react-native";
-import { Icon } from "react-native-elements";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  View,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Icon } from "react-native-elements/dist/icons/Icon";
 import { useDispatch } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import { setDestination } from "../slices/navSlice";
@@ -45,23 +50,8 @@ const NavigateCard = () => {
           }}
           style={tw`flex flex-row justify-between bg-black w-24 px-4 py-3 rounded-full`}
         >
-          <Icon
-            onPress={() => {
-              navigation.navigate("RideOptionsCard");
-            }}
-            name="car"
-            type="font-awesome"
-            color="white"
-            size={16}
-          />
-          <Text
-            style={tw`text-white text-center`}
-            onPress={() => {
-              navigation.navigate("RideOptionsCard");
-            }}
-          >
-            Rides
-          </Text>
+          <Icon name="car" type="font-awesome" color="white" size={16} />
+          <Text style={tw`text-white text-center`}>Rides</Text>
         </TouchableOpacity>
 
         <TouchableOpacity

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import tw from "tailwind-react-native-classnames";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   selectDestination,
   selectOrigin,
@@ -11,7 +11,6 @@ import {
 import MapViewDirections from "react-native-maps-directions";
 
 import { MAPBOX_TOKEN } from "@env";
-import { useDispatch } from "react-redux";
 
 const Map = () => {
   const origin = useSelector(selectOrigin);
@@ -24,25 +23,25 @@ const Map = () => {
 
   //   const mapRef = useRef(null);
 
-  //   useEffect(() => {
-  //     if (!origin || !destination) return;
-  //     mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-  //       edgePadding: { top: 50, right: 50, left: 50, bottom: 50 },
-  //     });
-  //   }, [origin, destination]);
+  // useEffect(() => {
+  //   if (!origin || !destination) return;
+  //   mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
+  //     edgePadding: { top: 50, right: 50, left: 50, bottom: 50 },
+  //   });
+  // }, [origin, destination]);
 
-  useEffect(() => {
-    if (!origin || !destination) return;
+  // useEffect(() => {
+  //   if (!origin || !destination) return;
 
-    const getTravelTime = async () => {
-      fetch(`https://mapbox`)
-        .then((res) => res.json())
-        .then((data) => {
-          dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
-        });
-    };
-    getTravelTime();
-  }, [origin, destination, MAPBOX_TOKEN]);
+  //   const getTravelTime = async () => {
+  //     fetch(`https://mapbox`)
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
+  //       });
+  //   };
+  //   getTravelTime();
+  // }, [origin, destination, MAPBOX_TOKEN]);
 
   return (
     <MapView

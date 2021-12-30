@@ -25,7 +25,7 @@ const HomeScreen = () => {
           source={logo}
           style={{ width: 150, height: 150, resizeMode: "contain" }}
         />
-        <Text>Places Autocomplete</Text>
+        <Text> Autocomplete</Text>
         {/* <MapboxAutocomplete
           publicKey={MAPBOX_TOKEN}
           onSuggestionSelect={suggestionSelect}

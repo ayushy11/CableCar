@@ -1,10 +1,16 @@
-import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { StyleSheet, Text, SafeAreaView, View } from "react-native";
-import { Icon } from "react-native-elements";
-import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  View,
+  TouchableOpacity,
+  FlatList,
+  Image,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Icon } from "react-native-elements/dist/icons/Icon";
+import { useSelector, useDispatch } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import {
   selectTravelTimeInformation,
@@ -87,7 +93,7 @@ const RideOptionsCard = () => {
             </View>
             <Text style={tw`text-xl`}>
               $99
-              {new Intl.NumberFormat("en-us", {
+              {/* {new Intl.NumberFormat("en-us", {
                 style: "currency",
                 currency: "USD",
               }).format(
@@ -95,7 +101,7 @@ const RideOptionsCard = () => {
                   SURGE_CHARGE_RATE *
                   multiplier) /
                   100
-              )}
+              )} */}
             </Text>
           </TouchableOpacity>
         )}
