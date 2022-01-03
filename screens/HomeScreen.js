@@ -4,10 +4,10 @@ import tw from "tailwind-react-native-classnames";
 import logo from "../assets/cablecar.png";
 import NavOptions from "../components/NavOptions";
 import NavFavourites from "../components/NavFavourites";
-// import MapboxAutocomplete from "react-mapbox-autocomplete";
 
 import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
+import MapAutocomplete from "../components/MapAutocomplete";
 
 const HomeScreen = () => {
   // const dispatch = useDispatch();
@@ -25,18 +25,7 @@ const HomeScreen = () => {
           source={logo}
           style={{ width: 150, height: 150, resizeMode: "contain" }}
         />
-        <Text> Autocomplete</Text>
-        {/* <MapboxAutocomplete
-          publicKey={MAPBOX_TOKEN}
-          onSuggestionSelect={suggestionSelect}
-          styles={{
-            width: "100px",
-            height: "100px",
-          }}
-          inputClass="form-control"
-          country="us"
-          resetSearch={false}
-        /> */}
+        <MapAutocomplete />
         <NavOptions />
         <NavFavourites />
       </View>

@@ -10,7 +10,7 @@ import {
 } from "../slices/navSlice";
 import MapViewDirections from "react-native-maps-directions";
 
-import { MAPBOX_TOKEN } from "@env";
+// import { MAPBOX_TOKEN } from "@env";
 
 const Map = () => {
   const origin = useSelector(selectOrigin);

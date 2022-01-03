@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import { setDestination } from "../slices/navSlice";
 import NavFavourites from "./NavFavourites";
+import MapAutocomplete from "./MapAutocomplete";
 
 const NavigateCard = () => {
   const navigation = useNavigation();
@@ -26,16 +27,10 @@ const NavigateCard = () => {
 
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text style={tw`text-center py-5 text-xl`}>Navigate Card</Text>
+      <Text style={tw`text-center py-5 text-xl`}>Navigate</Text>
       <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View>
-          <Text
-            onPress={() => {
-              navigation.navigate("RideOptionsCard");
-            }}
-          >
-            Places Autocomplete
-          </Text>
+          <MapAutocomplete />
         </View>
 
         <NavFavourites />
